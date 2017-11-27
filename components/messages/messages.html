@@ -1,0 +1,13 @@
+<div class="leave-a-message-container">
+    <p>To:
+    </p>    
+    <input type: 'text' ng-model="newMessage.to"></input>
+    <p>Message</p>
+    <textarea maxlength="1000" type: 'text' ng-model="newMessage.message"></textarea> 
+    <p>From:</p>
+    <input type: 'text' ng-model="newMessage.from"></input>
+    <input type="submit" ng-click="submitMessage()"></input>
+    <div ng-if="newMessage.to && newMessage.from">
+        {{newMessage.to}}, {{newMessage.message}} - {{newMessage.from}}
+    </div>
+</div>
