@@ -1,5 +1,12 @@
 angular.module('app').component('leaveMessage', {
-    templateUrl: '/components/messages/messages.html'    
+    templateUrl: '/components/messages/messages.html',
+    controller: function(mainSrvc) {
+        this.messages = mainSrvc.messages;
+        console.log(this.messages);
+        this.submitMessage = function(obj){
+            this.messages.push(obj);
+        }
+    }    
 })
 
 // submitMessage($scope){
